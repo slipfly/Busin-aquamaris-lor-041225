@@ -1,0 +1,99 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.star, 
+.side {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1819px;
+    height: 155px;
+    top: 79px;
+    left: 87px;
+}
+
+.star-1 {
+    background-image: url(./image/star-1.png);
+    width: 556px;
+    height: 577px;
+    top: 190px;
+    left: 0px;
+}
+
+.star-2 {
+    background-image: url(./image/star-2.png);
+    width: 722px;
+    height: 722px;
+    left: 188px;
+    bottom: 21px;
+} 
+
+.star-3 {
+    background-image: url(./image/star-3.png);
+    width: 401px;
+    height: 401px;
+    top: 232px;
+    left: 519px;
+} 
+
+.star-4 {
+    background-image: url(./image/star-4.png);
+    width: 633px;
+    height: 633px;
+    left: 691px;
+    bottom: 47px;
+} 
+
+.star-5 {
+    background-image: url(./image/star-5.png);
+    width: 424px;
+    height: 424px;
+    top: 253px;
+    right: 717px;
+} 
+
+.image {
+    background-image: url(./image/image.png);
+    width: 556px;
+    height: 297px;
+    top: 271px;
+    right: 62px;
+}
+
+.text {
+    background-image: url(./image/text.png);
+    width: 531px;
+    height: 153px;
+    right: 89px;
+    bottom: 449px;
+}
+
+.point-1 {
+    background-image: url(./image/point-1.png);
+    width: 585px;
+    height: 70px;
+    right: 33px;
+    bottom: 355px;
+} 
+
+.point-2 {
+    background-image: url(./image/point-2.png);
+    width: 618px;
+    height: 70px;
+    right: 0px;
+    bottom: 262px;
+} 
+
+.point-3 {
+    background-image: url(./image/point-3.png);
+    width: 618px;
+    height: 70px;
+    right: 0px;
+    bottom: 169px;
+} 

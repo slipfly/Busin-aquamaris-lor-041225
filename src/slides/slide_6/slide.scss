@@ -1,0 +1,229 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title, 
+.subtitle,
+.advantages-box, 
+.circle,
+.advantages,
+.seahorse,
+.bottle-1,
+.bottle-2,
+.age, 
+.octo,
+.corall,
+.popup,
+.popup__open-btn,
+.popup__close-btn {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1207px;
+    height: 210px;
+    top: 149px;
+    left: 81px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 906px;
+    height: 68px;
+    top: 387px;
+    left: 0px;
+}
+
+.advantages-box {
+    width: 528px;
+    height: 426px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.circle-dark {
+    background-image: url(./image/circle-dark.png);
+    width: 528px;
+    height: 426px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.circle-light {
+    background-image: url(./image/circle-light.png);
+    width: 464px;
+    height: 394px;
+    bottom: 0px;
+    left: 32px;
+}
+
+.advantages {
+    background-image: url(./image/advantages.png);
+    width: 357px;
+    height: 36px;
+    bottom: 203px;
+    left: 86px;
+}
+
+.seahorse {
+    background-image: url(./image/seahorse.png);
+    width: 201px;
+    height: 201px;
+    bottom: 282px;
+    left: -188px;
+}
+
+.bottle-1 {
+    background-image: url(./image/bottle-1.png);
+    width: 687px;
+    height: 1018px;
+    top: 65px;
+    right: 277px;
+}
+
+.bottle-2 {
+    background-image: url(./image/bottle-2.png);
+    width: 699px;
+    height: 1022px;
+    top: 82px;
+    right: 19px;
+}
+
+.age {
+    width: 149px;
+    height: 149px;
+    top: 362px;
+}
+
+.age-1 {
+    background-image: url(./image/age-1.png);
+    right: 684px;
+}
+
+.age-2 {
+    background-image: url(./image/age-2.png);
+    right: 135px;
+}
+
+.octo {
+    background-image: url(./image/octo.png);
+    width: 418px;
+    height: 652px;
+    right: 670px;
+    bottom: 77px;
+}
+
+.popup__open-btn {
+    background-image: url(./image/pop-open-btn.svg);
+    width: 70px;
+    height: 70px;
+}
+
+.popup__close-btn {
+    width: 70px;
+    height: 70px;
+}
+
+.circle {
+    transform-origin: bottom center;
+}
+
+.corall {
+    transform-origin: bottom left;
+    transform: scale(0);
+}
+
+.corall-1 {
+    background-image: url(./image/corall-1.png);
+    width: 240px;
+    height: 313px;
+    left: 41px;
+    bottom: 189px;
+}
+
+.corall-2 {
+    background-image: url(./image/corall-2.png);
+    width: 836px;
+    height: 426px;
+    left: 0;
+    bottom: 0;
+} 
+
+.popup__open-btn {
+    transform: scale(0);
+}
+
+[data-popup-id='pop-0'] {
+    left: 57px;
+    bottom: 474px;
+}
+
+[data-popup-id='pop-1']  {
+    left: 260px;
+    bottom: 387px;
+}
+
+[data-popup-id='pop-2'] {
+    left: 585px;
+    bottom: 364px;
+}
+
+[data-popup-id='pop-3'] {
+    left: 756px;
+    bottom: 180px;
+}
+
+#pop-0 {
+    background-image: url(./image/pop-0.png);
+    width: 616px;
+    height: 141px;
+    left: 57px;
+    bottom: 474px;
+
+    & > .popup__close-btn {
+        left: 0;
+        bottom: 0;
+    }
+}
+
+#pop-1 {
+    background-image: url(./image/pop-1.png);
+    width: 549px;
+    height: 185px;
+    left: 260px;
+    bottom: 384px;
+
+    & > .popup__close-btn {
+        left: 0;
+        bottom: 0;
+    }
+}
+
+#pop-2 {
+    background-image: url(./image/pop-2.png);
+    width: 469px;
+    height: 201px;
+    left: 510px;
+    bottom: 364px;
+
+    & > .popup__close-btn {
+        left: 75px;
+        bottom: 0;
+    }
+}
+
+#pop-3 {
+    background-image: url(./image/pop-3.png);
+    width: 407px;
+    height: 193px;
+    left: 687px;
+    bottom: 180px;
+
+    & > .popup__close-btn {
+        left: 70px;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,60 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.subtitle,
+.star,
+.head {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1413px;
+    height: 235px;
+    top: 80px;
+    left: 88px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 1065px;
+    height: 119px;
+    left: 86px;
+    top: 358px;
+} 
+
+.star-1 {
+    background-image: url(./image/star-1.png);
+    width: 625px;
+    height: 648px;
+    bottom: 158px;
+    left: 0px;
+}
+
+.star-2 {
+    background-image: url(./image/star-2.png);
+    width: 648px;
+    height: 648px;
+    left: 405px;
+    bottom: 33px;
+}
+
+.star-3 {
+    background-image: url(./image/star-3.png);
+    width: 414px;
+    height: 414px;
+    bottom: 332px;
+    left: 866px;
+}
+
+.head {
+    background-image: url(./image/head.png);
+    width: 1280px;
+    height: 964px;
+    right: 24px;
+    bottom: 0;
+}

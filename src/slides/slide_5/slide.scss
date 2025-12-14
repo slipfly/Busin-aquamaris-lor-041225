@@ -1,0 +1,55 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.text-1,
+.image,
+.text-2,
+.star {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1216px;
+    height: 156px;
+    top: 80px;
+    left: 87px;
+}
+
+
+.text-1 {
+    background-image: url(./image/text-1.png);
+    width: 581px;
+    height: 233px;
+    top: 416px;
+    left: 83px;
+
+}
+
+.image {
+    background-image: url(./image/image.png);
+    width: 550px;
+    height: 687px;
+    right: 611px;
+    bottom: 199px;
+} 
+
+.text-2 {
+    background-image: url(./image/text-2.png);
+    width: 534px;
+    height: 563px;
+    right: 60px;
+    bottom: 327px;
+}
+
+.star {
+    background-image: url(./image/star.png);
+    width: 101px;
+    height: 103px;
+    right: 559px;
+    bottom: 219px;
+}

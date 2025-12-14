@@ -1,0 +1,95 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.subtitle,
+.plate,
+.symptom,
+.plate-4,
+.kid,
+.corall, 
+.text {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1568px;
+    height: 153px;
+    top: 83px;
+    left: 88px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 1541px;
+    height: 90px;
+    top: 292px;
+    left: 83px;
+}
+
+.plate {
+    width: 362px;
+    height: 221px;
+    bottom: 559px;
+}
+
+.plate-1 {
+    background-image: url(./image/plate-1.png);
+    left: 67px;
+}
+
+.plate-2 {
+    background-image: url(./image/plate-2.png);
+    left: 430px;
+} 
+
+.plate-3 {
+    background-image: url(./image/plate-3.png);
+    left: 793px;
+}
+
+.symptom {
+    background-image: url(./image/symptom.png);
+    width: 849px;
+    height: 104px;
+    bottom: 414px;
+    left: 186px;
+}
+
+.plate-4 {
+    background-image: url(./image/plate-4.png);
+    width: 964px;
+    height: 458px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.kid {
+    background-image: url(./image/kid.png);
+    width: 1058px;
+    height: 705px;
+    right: 281px;
+    bottom: 75px;
+    z-index: 1;
+}
+
+.corall {
+    background-image: url(./image/corall.png);
+    width: 919px;
+    height: 1200px;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom right;
+}
+
+.text {
+    background-image: url(./image/text.png);
+    width: 399px;
+    height: 392px;
+    right: 27px;
+    bottom: 206px;
+}

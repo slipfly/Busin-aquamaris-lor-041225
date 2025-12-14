@@ -1,0 +1,79 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title, 
+.subtitle, 
+.star,
+.bottle,
+.age {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1142px;
+    height: 189px;
+    top: 149px;
+    left: 80px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 906px;
+    height: 68px;
+    top: 387px;
+    left: 0px;
+}
+
+.star-1 {
+    background-image: url(./image/star-1.png);
+    width: 447px;
+    height: 526px;
+    bottom: 214px;
+    left: 82px;
+}
+
+.star-2 {
+    background-image: url(./image/star-2.png);
+    width: 546px;
+    height: 546px;
+    bottom: 147px;
+    left: 626px;
+}
+
+.star-3 {
+    background-image: url(./image/star-3.png);
+    width: 399px;
+    height: 437px;
+    top: 182px;
+    right: 66px;
+}
+
+.star-4 {
+    background-image: url(./image/star-4.png);
+    width: 376px;
+    height: 397px;
+    bottom: 151px;
+    right: 166px;
+}
+
+.bottle {
+    background-image: url(./image/bottle.png);
+    width: 516px;
+    height: 1142px;
+    top: 0px;
+    right: 412px;
+    z-index: 1;
+}
+
+.age {
+    background-image: url(./image/age.png);
+    width: 149px;
+    height: 149px;
+    top: 224px;
+    right: 721px;
+    z-index: 1;
+}

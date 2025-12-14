@@ -1,0 +1,143 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title, 
+.subtitle, 
+.col,
+.point,
+.corall,
+.text {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1169px;
+    height: 152px;
+    top: 82px;
+    left: 83px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 1131px;
+    height: 147px;
+    top: 252px;
+    left: 62px;
+} 
+
+.col1__point-1 {
+    background-image: url(./image/col1__point-1.png);
+    width: 456px;
+    height: 168px;
+    left: 84px;
+    bottom: 610px;
+} 
+
+.col1__point-2 {
+    background-image: url(./image/col1__point-2.png);
+    width: 569px;
+    height: 225px;
+    left: 42px;
+    bottom: 369px;
+} 
+
+.col1__point-3 {
+    background-image: url(./image/col1__point-3.png);
+    width: 588px;
+    height: 225px;
+    left: 42px;
+    bottom: 172px;
+}
+
+.col2__point-1 {
+    background-image: url(./image/col2__point-1.png);
+    width: 420px;
+    height: 682px;
+    left: 681px;
+    bottom: 120px;
+} 
+
+.col2__point-2 {
+    background-image: url(./image/col2__point-2.png);
+    width: 331px;
+    height: 52px;
+    left: 710px;
+    bottom: 563px;
+}
+
+.col2__point-3 {
+    background-image: url(./image/col2__point-3.png);
+    width: 372px;
+    height: 83px;
+    left: 704px;
+    bottom: 457px;
+}
+
+.col2__point-4 {
+    background-image: url(./image/col2__point-4.png);
+    width: 408px;
+    height: 95px;
+    left: 710px;
+    bottom: 350px;
+} 
+
+.col2__point-5 {
+    background-image: url(./image/col2__point-5.png);
+    width: 429px;
+    height: 135px;
+    left: 710px;
+    bottom: 195px;
+}
+
+.corall {
+    transform-origin: bottom right;
+}
+
+.corall-1 {
+    background-image: url(./image/corall-1.png);
+    width: 770px;
+    height: 816px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.corall-2 {
+    background-image: url(./image/corall-2.png);
+    width: 136px;
+    height: 160px;
+    right: 626px;
+    bottom: 412px;
+} 
+
+.text {
+    z-index: 2;
+}
+
+.text-1 {
+    background-image: url(./image/text-1.png);
+    width: 413px;
+    height: 85px;
+    right: 163px;
+    bottom: 607px;
+}
+
+.text-2 {
+    background-image: url(./image/text-2.png);
+    width: 454px;
+    height: 240px;
+    right: 125px;
+    bottom: 322px;
+}
+
+.text-3 {
+    background-image: url(./image/text-3.png);
+    width: 461px;
+    height: 100px;
+    right: 118px;
+    bottom: 199px
+}

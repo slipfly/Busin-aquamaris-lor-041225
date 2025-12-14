@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        block title
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="format-detection", content="telephone=no")
+        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+        link(rel="stylesheet", href="../shared/libs.min.css", type="text/css")
+        link(rel="stylesheet", href="./slide.min.css", type="text/css")
+    body.preload
+        main.slide
+            block content
+
+            include ./side-menu.pug
+            
+            include ./links.pug
+
+            include ./header.pug
+
+        script(src="../shared/app.min.js")  
+        script(src="../shared/libs.min.js")  
+        script(src="../shared/branches.js")
+        script(src="./slide.min.js")
+        script(type="text/javascript").
+            window.addEventListener('load', function () {
+                document.body.classList.remove('preload');
+            });

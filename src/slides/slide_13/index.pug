@@ -1,0 +1,13 @@
+extends ../_partials/main-layout
+
+block title
+    title slide_13
+
+block content
+    .swipe.swipeRight
+        .title
+        .ray 
+        video#video-1(src="../shared/video/clean.mp4", controls="true")
+        video#video-2(src="../shared/video/clean-2.mp4", controls="true")
+        .video__play(data-play="video-1")
+        .video__play(data-play="video-2")

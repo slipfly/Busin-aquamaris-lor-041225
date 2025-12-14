@@ -1,0 +1,63 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.video__play,
+.ray {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 689px;
+    height: 226px;
+    top: 485px;
+    left: 81px;
+}
+
+.video__play {
+    height: 860px;
+    top: 170px;
+
+    &[data-play="video-1"] {
+        background-image: url(./image/preview-1.png);
+        width: 491px;
+        right: 150px;
+
+    }
+
+    &[data-play="video-2"] {
+        background-image: url(./image/preview-2.png);
+        width: 487px;
+        right: 684px;
+        
+    }
+}
+
+video {
+    position: absolute;
+    height: 860px;
+    top: 170px;
+    border-radius: 30px;
+
+    &#video-2 {
+        width: 487px;
+        right: 684px;
+    }
+
+    &#video-1 {
+        width: 491px;
+        right: 150px;
+    }
+}
+
+.ray {
+    background-image: url(./image/ray.png);
+    width: 767px;
+    height: 496px;
+    left: 172px;
+    top: 12px;
+}

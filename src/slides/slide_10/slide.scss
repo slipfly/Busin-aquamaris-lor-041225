@@ -1,0 +1,86 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.image,
+.plate,
+.star,
+.fish {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1207px;
+    height: 235px;
+    top: 82px;
+    left: 83px;
+}
+
+.image {
+
+}
+
+.image-1 {
+    background-image: url(./image/image-1.png);
+    width: 729px;
+    height: 390px;
+    bottom: 140px;
+    left: 86px;
+}
+
+.image-2 {
+    background-image: url(./image/image-2.png);
+    width: 734px;
+    height: 392px;
+    top: 294px;
+    right: 60px;
+} 
+
+.plate {
+    width: 433px;
+    height: 274px;
+}
+
+.plate-1 {
+    background-image: url(./image/plate-1.png);
+    top: 353px;
+    left: 86px;
+}
+
+.plate-2 {
+    background-image: url(./image/plate-2.png);
+    top: 353px;
+    left: 649px;
+}
+
+.plate-3 {
+    background-image: url(./image/plate-3.png);
+    bottom: 198px;
+    right: 620px;
+}
+
+.plate-4 {
+    background-image: url(./image/plate-4.png);
+    right: 59px;
+    bottom: 198px;
+}
+
+.star {
+    background-image: url(./image/star.png);
+    width: 101px;
+    height: 103px;
+    top: 312px;
+    right: 881px;
+}
+
+.fish {
+    background-image: url(./image/fish.png);
+    width: 238px;
+    height: 238px;
+    right: -59px;
+    bottom: 97px;
+}

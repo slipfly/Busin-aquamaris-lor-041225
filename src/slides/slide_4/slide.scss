@@ -1,0 +1,92 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title, 
+.col1,
+.col2,
+.col3 {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1252px;
+    height: 152px;
+    top: 82px;
+    left: 83px;
+}
+
+.c1__point1 {
+    background-image: url(./image/c1__point1.png);
+    width: 267px;
+    height: 267px;
+    left: 44px;
+    bottom: 676px;
+} 
+
+.c1__point2 {
+    background-image: url(./image/c1__point2.png);
+    width: 721px;
+    height: 68px;
+    left: 86px;
+    bottom: 609px;
+} 
+
+.c1__point3 {
+    background-image: url(./image/c1__point3.png);
+    width: 755px;
+    height: 153px;
+    left: 34px;
+    bottom: 431px;
+}
+
+.c1__point4 {
+    background-image: url(./image/c1__point4.png);
+    width: 705px;
+    height: 217px;
+    left: 84px;
+    bottom: 175px;
+}
+
+.c2__point1 {
+    background-image: url(./image/c2__point1.png);
+    width: 555px;
+    height: 783px;
+    right: 536px;
+    bottom: 120px;
+}
+
+.c2__point2 {
+    background-image: url(./image/c2__point2.png);
+    width: 464px;
+    height: 189px;
+    right: 599px;
+    bottom: 571px;
+}
+
+.c2__point3 {
+    background-image: url(./image/c2__point3.png);
+    width: 390px;
+    height: 195px;
+    right: 673px;
+    bottom: 285px;
+}
+
+.c3__point1 {
+    background-image: url(./image/c3__point1.png);
+    width: 514px;
+    height: 206px;
+    right: 0px;
+    bottom: 708px;
+} 
+
+.c3__point2 {
+    background-image: url(./image/c3__point2.png);
+    width: 514px;
+    height: 204px;
+    right: 0px;
+    bottom: 472px;
+} 

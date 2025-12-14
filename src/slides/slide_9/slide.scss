@@ -1,0 +1,149 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title,
+.subtitle, 
+.plate,
+.graph__title,
+.graph__bottom, 
+.column,
+.number,
+.shell,
+.star {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1319px;
+    height: 212px;
+    left: 89px;
+    top: 80px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 1685px;
+    height: 40px;
+    left: 87px;
+    top: 327px;
+}
+
+.plate {
+    background-image: url(./image/plate.png);
+    width: 1854px;
+    height: 632px;
+    bottom: 145px;
+    left: 86px;
+}
+
+.graph__title {
+    background-image: url(./image/graph__title.png);
+    width: 1055px;
+    height: 105px;
+    left: 2px;
+    top: 51px;
+}
+
+.graph__bottom {
+    background-image: url(./image/graph__bottom.png);
+    width: 1677px;
+    height: 55px;
+    bottom: 38px;
+    left: 41px;
+}
+
+.column {
+    width: 85px;
+    bottom: 93px;
+    transform-origin: bottom;
+}
+
+.graph__column-1 {
+    background-image: url(./image/graph__column-1.png);
+    height: 278px;
+    left: 99px;
+}
+
+.graph__column-2 {
+    background-image: url(./image/graph__column-2.png);
+    height: 165px;
+    left: 469px;
+}
+
+.graph__column-3 {
+    background-image: url(./image/graph__column-3.png);
+    height: 220px;
+    left: 824px;
+}
+
+.graph__column-4 {
+    background-image: url(./image/graph__column-4.png);
+    height: 86px;
+    right: 590px;
+}
+
+.graph__column-5 {
+    background-image: url(./image/graph__column-5.png);
+    height: 176px;
+    right: 194px;
+}
+
+.number {
+    height: 33px;
+}
+
+.graph__num-1 {
+    background-image: url(./image/graph__num-1.png);
+    width: 118px;
+    height: 44px;
+    top: 199px;
+    left: 84px;
+}
+
+.graph__num-2 {
+    background-image: url(./image/graph__num-2.png);
+    width: 85px;
+    top: 327px;
+    left: 469px;
+}
+
+.graph__num-3 {
+    background-image: url(./image/graph__num-3.png);
+    width: 88px;
+    top: 270px;
+    left: 824px;
+}
+
+.graph__num-4 {
+    background-image: url(./image/graph__num-4.png);
+    width: 84px;
+    top: 404px;
+    right: 589px;
+}
+
+.graph__num-5 {
+    background-image: url(./image/graph__num-5.png);
+    width: 90px;
+    top: 313px;
+    right: 190px;
+}
+
+.shell {
+    background-image: url(./image/shell.png);
+    width: 172px;
+    height: 136px;
+    bottom: 207px;
+    left: 246px;
+}
+
+.star {
+    background-image: url(./image/star.png);
+    width: 101px;
+    height: 103px;
+    top: 376px;
+    right: 88px;
+}

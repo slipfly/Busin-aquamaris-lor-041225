@@ -1,0 +1,35 @@
+.slide {
+    background-image: url('./image/bg-1.png');
+}
+
+.title, 
+.subtitle, 
+.product {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    background-image: url(./image/title.png);
+    width: 1055px;
+    height: 122px;
+    top: 80px;
+    left: 84px;
+}
+
+.subtitle {
+    background-image: url(./image/subtitle.png);
+    width: 1010px;
+    height: 128px;
+    top: 236px;
+    left: 0px;
+} 
+
+.product {
+    background-image: url(./image/product.png);
+    width: 1451px;
+    height: 1200px;
+    top: 0px;
+    left: 471px;
+}
