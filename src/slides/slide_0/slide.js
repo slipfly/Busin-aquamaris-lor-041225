@@ -29,7 +29,7 @@ tl.fromTo('.title, .subtitle', {
     y: 0,
     opacity: 1,
     stagger: .4,
-}).fromTo('.bottle-1, .bottle-2, .bottle-3', {
+}).fromTo('.bottle-1, .bottle-2, .bottle-3, .shell', {
     x: 1200,
 }, {
     x: 0,

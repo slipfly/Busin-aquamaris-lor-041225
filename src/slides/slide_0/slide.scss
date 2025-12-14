@@ -5,6 +5,7 @@
 .title,
 .subtitle, 
 .star,
+.shell,
 .bottle-1, 
 .bottle-2,
 .bottle-3, 
@@ -76,4 +77,12 @@
     height: 706px;
     left: -256px;
     bottom: -67px;
+}
+
+.shell {
+    background-image: url(./image/shell.png);
+    width: 203px;
+    height: 164px;
+    right: 0px;
+    bottom: 114px;
 }
