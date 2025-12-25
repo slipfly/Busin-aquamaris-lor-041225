@@ -2,6 +2,10 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
 .title,
 .star, 
 .side {
@@ -12,88 +16,88 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1819px;
-    height: 155px;
-    top: 79px;
-    left: 87px;
+    width: 1137px;
+    height: 97px;
+    top: 52px;
+    left: 50px;
 }
 
 .star-1 {
     background-image: url(./image/star-1.png);
-    width: 556px;
-    height: 577px;
-    top: 190px;
+    width: 356px;
+    height: 369px;
+    top: 122px;
     left: 0px;
 }
 
 .star-2 {
     background-image: url(./image/star-2.png);
-    width: 722px;
-    height: 722px;
-    left: 188px;
-    bottom: 21px;
+    width: 462px;
+    height: 462px;
+    left: 120px;
+    bottom: 13px;
 } 
 
 .star-3 {
     background-image: url(./image/star-3.png);
-    width: 401px;
-    height: 401px;
-    top: 232px;
-    left: 519px;
+    width: 257px;
+    height: 257px;
+    top: 148px;
+    left: 332px;
 } 
 
 .star-4 {
     background-image: url(./image/star-4.png);
-    width: 633px;
-    height: 633px;
-    left: 691px;
-    bottom: 47px;
+    width: 405px;
+    height: 405px;
+    left: 442px;
+    bottom: 30px;
 } 
 
 .star-5 {
     background-image: url(./image/star-5.png);
-    width: 424px;
-    height: 424px;
-    top: 253px;
-    right: 717px;
+    width: 271px;
+    height: 271px;
+    top: 162px;
+    right: 459px;
 } 
 
 .image {
     background-image: url(./image/image.png);
-    width: 556px;
-    height: 297px;
-    top: 271px;
-    right: 62px;
+    width: 358px;
+    height: 191px;
+    top: 173px;
+    right: 48px;
 }
 
 .text {
     background-image: url(./image/text.png);
-    width: 531px;
-    height: 153px;
-    right: 89px;
-    bottom: 449px;
+    width: 339px;
+    height: 96px;
+    right: 30px;
+    bottom: 294px;
 }
 
 .point-1 {
     background-image: url(./image/point-1.png);
-    width: 585px;
-    height: 70px;
-    right: 33px;
-    bottom: 355px;
+    width: 375px;
+    height: 44px;
+    right: 30px;
+    bottom: 228px;
 } 
 
 .point-2 {
     background-image: url(./image/point-2.png);
-    width: 618px;
-    height: 70px;
+    width: 405px;
+    height: 44px;
     right: 0px;
-    bottom: 262px;
+    bottom: 168px;
 } 
 
 .point-3 {
     background-image: url(./image/point-3.png);
-    width: 618px;
-    height: 70px;
+    width: 402px;
+    height: 44px;
     right: 0px;
-    bottom: 169px;
+    bottom: 109px;
 } 

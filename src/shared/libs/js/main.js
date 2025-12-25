@@ -1,5 +1,202 @@
 const slidesAmount = 14; // поменять
 const presName = 'Aquamaris_1225'
+HOME_SLIDE = 'slide_0' // Поменять
+
+// datacontainer
+
+const getDCStory = () => {
+    const story = [];
+    for (let i = 0; i < slidesAmount; i++) {
+        const name = `slide_${i}`;
+        story.push(name);
+    }
+    return story;
+}
+
+const generateTimeBasedUUID = () => {
+    // Get current timestamp in milliseconds
+    const timestamp = Date.now();
+
+    // Convert timestamp to hex and pad to ensure length
+    const timeHex = timestamp.toString(16).padStart(12, '0');
+
+    // Generate random hex values for the remaining parts
+    const randomPart1 = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
+    const randomPart2 = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
+    const randomPart3 = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
+
+    // Construct the UUID in the format: 8-4-4-4-12
+    return `${timeHex.slice(0, 8)}-${timeHex.slice(8, 12)}-4${randomPart1.slice(1, 4)}-${(Math.floor(Math.random() * 4) + 8).toString(16)}${randomPart1.slice(4, 7)}-${randomPart2}${randomPart3.slice(0, 4)}`;
+}
+
+const getDCSlides = () => {
+    const slides = [];
+    for (let i = 0; i < slidesAmount; i++) {
+        slides.push(getDCNewSlide(`slide_${i}`))
+    }
+    return slides;
+}
+
+const setDCSlideStartDate = (slide, startTime) => {
+    return {
+        ...slide,
+        SlideTiming: {
+            ...slide.SlideTiming,
+            startDate: {
+                ...slide.SlideTiming.dueDate,
+                value: startTime
+            }
+        }
+    }
+}
+
+const setDCSlideEndDate = (slide, endTime) => {
+    const startTime = slide.SlideTiming.startDate.value;
+    const calcDuration = ((endTime - startTime) / (1000 * 60)).toFixed(1);
+    return {
+        ...slide,
+        SlideTiming: {
+            ...slide.SlideTiming,
+            dueDate: {
+                ...slide.SlideTiming.dueDate,
+                value: endTime
+            },
+            duration: {
+                ...slide.SlideTiming.duration,
+                value: calcDuration
+            }
+        }
+    }
+}
+
+const getDCNewSlide = (slide) => {
+    return {
+        name: slide,
+        title: slide,
+        SlideTiming: {
+            startDate: {
+                title: "Начало",
+                value: undefined,
+                valueType: 7
+            },
+            dueDate: {
+                title: "Завершение",
+                value: undefined,
+                valueType: 7
+            },
+            duration: {
+                title: "Продолжительность, мин",
+                value: undefined,
+                valueType: 1
+            }
+        },
+        like: {
+            title: 'like',
+            value: 0,
+            valueType: 5
+        },
+        dislike: {
+            title: 'dislike',
+            value: 0,
+            valueType: 5
+        },
+        bookmark: {
+            title: 'bookmark',
+            value: 0,
+            valueType: 5
+        },
+        visited: {
+            title: 'visited',
+            value: 0,
+            valueType: 5
+        }
+    }
+}
+
+const setDCPresTiming = (dc, endTime) => {
+    const startTime = dc.PresentationTiming.startDate.value;
+    const calcDuration = ((endTime - startTime) / (1000 * 60)).toFixed(1);
+    return {
+        ...dc,
+        PresentationTiming: {
+            ...dc.PresentationTiming,
+            dueDate: {
+                ...dc.PresentationTiming.dueDate,
+                value: endTime,
+            },
+            duration: {
+                ...dc.PresentationTiming.duration,
+                value: calcDuration,
+            }
+        }
+    }
+}
+
+function endCount() {
+    const dc = JSON.parse(localStorage.getItem('Datacontainer'));
+    const currentSlide = document.querySelector('title').innerText;
+    const slide = dc.slides.find(item => item.name == currentSlide);
+    if (!slide.SlideTiming.dueDate.value) {
+        updateDC(undefined, {
+            slide: currentSlide,
+            endTime: Date.now()
+        });
+    }
+}
+
+function updateDC(slideStartTime, slideEndTime) {
+    let dc = JSON.parse(localStorage.getItem('Datacontainer'));
+    if (slideStartTime) {
+        const slideIndex = dc.slides.findIndex(slide => slide.name === slideStartTime.slide);
+        if (!dc.slides[slideIndex].SlideTiming.startDate.value) {
+            const updatedSlide = setDCSlideStartDate(dc.slides[slideIndex], slideStartTime.startTime);
+            dc.slides[slideIndex] = updatedSlide;
+        }
+    }
+
+    if (slideEndTime) {
+        const slideIndex = dc.slides.findIndex(item => item.name == slideEndTime.slide);
+        const updatedSlide = setDCSlideEndDate(dc.slides[slideIndex], slideEndTime.endTime);
+        dc.slides[slideIndex] = updatedSlide;
+    }
+
+    const currentTime = Date.now();
+    dc = setDCPresTiming(dc, currentTime);
+    localStorage.setItem('Datacontainer', JSON.stringify(dc));
+}
+
+const getNewDC = () => {
+    return {
+        story: getDCStory(),
+        title: presName,
+        dataContainer: generateTimeBasedUUID(),
+        PresentationTiming: {
+            startDate: {
+                title: "Начало",
+                value: Date.now(),
+                valueType: 7
+            },
+            dueDate: {
+                title: "Завершение",
+                value: undefined,
+                valueType: 7
+            },
+            duration: {
+                title: "Продолжительность, мин",
+                value: undefined,
+                valueType: 1
+            }
+        },
+        slides: getDCSlides(),
+    }
+}
+
+const isDatacontainer = localStorage.getItem('Datacontainer') != undefined;
+
+if (!isDatacontainer || localStorage.getItem('Datacontainer').title != presName) {
+    const dc = getNewDC();
+    localStorage.setItem('Datacontainer', JSON.stringify(dc));
+}
 
 const getSelector = (node, attr, initSelector) =>
     node.getAttribute(attr) ? '#' + node.getAttribute(attr) : initSelector
@@ -58,22 +255,13 @@ const setChangeAnimation = (evt, objects) => {
 
     const viewTl = gsap.timeline();
 
-    viewTl.to(out, {
+    viewTl.to(out, .2, {
         display: 'none',
         opacity: 0
-    }).to(sel, {
+    }).to(sel, .2, {
         display: 'block',
         opacity: 1
-    });
-}
-
-const animatePointer = (evt) => {
-    const view = evt.target.dataset.open;
-    const pointerTl = gsap.timeline();
-    pointerTl.to('.pointer', {
-        x: pointerParams[view].x,
-        width: pointerParams[view].width
-    });
+    }, 0);
 }
 
 const changeLink = (counter) => {
@@ -88,9 +276,6 @@ const views = document.querySelectorAll('.view');
 
 openViewBtns.forEach(btn => btn.addEventListener('click', (evt) => {
     setChangeAnimation(evt, views)
-    animatePointer(evt);
-    const counter = evt.target.dataset.open.slice(-1);
-    changeLink(counter);
 }))
 
 // PopUp
@@ -136,6 +321,7 @@ const linksOpenBtn = document.querySelector('.header__links')
 const linksCloseBtn = document.querySelector('.links')
 const linkTl = gsap.timeline({ paused: true })
 let isLinkOpen = false;
+const isLinks = document.querySelector('.links__image').src.length > 0;
 
 if (linksCloseBtn) {
     linkTl.fromTo(
@@ -165,7 +351,7 @@ if (linksCloseBtn) {
         isLinkOpen = !isLinkOpen;
     }
     linksCloseBtn.onclick = () => {
-
+        linksOpenBtn.classList.remove('active')
         linkTl.reverse();
 
         isLinkOpen = !isLinkOpen;
@@ -195,10 +381,7 @@ const sideMenuTitles = {
 };
 
 const medications = [
-    'Аква Марис беби',
-    'Аква Марис лейка',
-    'Аква Марис экстремальный'
-]; 
+];
 
 const getMenuTitle = (part) => {
     const menuTitle = document.getElementById('menu_title');
@@ -238,7 +421,7 @@ const getMenuContent = (part) => {
         case sideMenuContent.evaluation:
             renderEvaluation();
             break;
-    
+
         default:
             contentContainer.innerHTML = '';
             break;
@@ -278,10 +461,12 @@ if (sideMenuOpenBtn) {
             contentHeight = undefined;
             setTimeout(() => {
                 contentHeight = content.offsetHeight;
-                if (contentHeight) {
-                    console.log(contentHeight);
+                console.log(contentHeight);
 
-                    if (contentHeight > 929) {
+                if (contentHeight) {
+                    //console.log(contentHeight);
+
+                    if (contentHeight > 591) {
                         gsap.to('.side-menu__scroll-container, #scroll', {
                             display: 'block',
                             opacity: 1
@@ -294,9 +479,6 @@ if (sideMenuOpenBtn) {
                     }
                 }
             }, 500);
-            
-            
-            
         });
     });
 }
@@ -307,12 +489,12 @@ Draggable.create("#scroll", {
         minX: 0,
         maxX: 0,
         minY: 0,
-        maxY: 802,
+        maxY: 514,
     },
     inertia: false,
     onDrag: function () {
-        let maxOffset = (contentHeight - 929);
-        let offset = (this.y / 802) * maxOffset; // считаем соотношение между скроллом и картинкой
+        let maxOffset = (contentHeight - 591);
+        let offset = (this.y / 514) * maxOffset; // считаем соотношение между скроллом и картинкой
         TweenLite.set(content, { y: -offset });
     },
 });
@@ -390,8 +572,10 @@ const setStateOf = (stateHolderName, state) => {
  */
 
 const checkStateOf = (stateHolderName, btn) => {
-    const dc = JSON.parse(localStorage.getItem('Datacontainer'));    
-    const currentSlide = document.querySelector('title').innerText;
+    const dc = JSON.parse(localStorage.getItem('Datacontainer'));
+    const currentSlide = document.title;
+    console.log(dc);
+
     const slide = dc.slides.find(item => item.name == currentSlide);
 
     if (!slide[stateHolderName].value) {
@@ -402,10 +586,10 @@ const checkStateOf = (stateHolderName, btn) => {
     return true;
 }
 
-const stateBtnHandler = (stateHolderName, btn) => {    
+const stateBtnHandler = (stateHolderName, btn) => {
     const dc = JSON.parse(localStorage.getItem('Datacontainer'));
-    const currentSlide = document.querySelector('title').innerText;
-    const slide = dc.slides.find(item => item.name == currentSlide);
+    const currentSlide = document.title;
+    const slide = dc.slides.find(sl => sl.name == currentSlide);
 
     slide[stateHolderName].value = !slide[stateHolderName].value;
 
@@ -424,7 +608,8 @@ function renderMaterials() {
         <a href="${path}${med}.pdf">${med}</a>
         <span>Инструкция<br>по применению</span>
         <div class="materials__mail-btn"></div>
-    </div>`));
+    </div>`)).join('');
+
     container.innerHTML = materialsContent;
 }
 
@@ -495,7 +680,7 @@ window.onload = () => {
 }
 
 const homeIcon = document.querySelector('.header__home')
-HOME_SLIDE = 'slide_0' // Поменять
+const logos = document.querySelectorAll('.logo');
 
 if (document.title === HOME_SLIDE) {
     localStorage.removeItem('path');
@@ -503,6 +688,11 @@ if (document.title === HOME_SLIDE) {
 
 if (homeIcon) {
     homeIcon.addEventListener('click', () => nav.goToSlideName(HOME_SLIDE))
+}
+
+if (logos.length > 0) {
+    logos.forEach(logo =>
+        logo.addEventListener('click', () => nav.goToSlideName(HOME_SLIDE)))
 }
 
 const backBtn = document.querySelector('.header__back');
@@ -515,13 +705,13 @@ if (backBtn) {
 // progress-bar
 const progressBar = document.getElementById('progress-bar');
 
-function getProgressBar () {
+function getProgressBar() {
     const currentSlide = document.querySelector('title').innerText.split('_').pop();
 
     for (let i = 0; i < slidesAmount; i++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('progress__block');
-        
+
         const divWidth = (progressBar.offsetWidth / slidesAmount) - 2;
         newDiv.style.width = `${divWidth}px`;
 
@@ -536,208 +726,6 @@ function getProgressBar () {
 }
 
 getProgressBar();
-
-// datacontainer
-
-const getDCStory = () => {
-    const story = [];
-    for (let i = 0; i < slidesAmount; i++) {
-        const name = `slide_${i}`;
-        story.push(name);
-    }
-    return story;
-}
-
-const generateTimeBasedUUID = () => {
-    // Get current timestamp in milliseconds
-    const timestamp = Date.now();
-
-    // Convert timestamp to hex and pad to ensure length
-    const timeHex = timestamp.toString(16).padStart(12, '0');
-
-    // Generate random hex values for the remaining parts
-    const randomPart1 = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
-    const randomPart2 = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
-    const randomPart3 = Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, '0');
-
-    // Construct the UUID in the format: 8-4-4-4-12
-    return `${timeHex.slice(0, 8)}-${timeHex.slice(8, 12)}-4${randomPart1.slice(1, 4)}-${(Math.floor(Math.random() * 4) + 8).toString(16)}${randomPart1.slice(4, 7)}-${randomPart2}${randomPart3.slice(0, 4)}`;
-}
-
-const getDCNewSlide = (slide) => {
-    return {
-        name: slide,
-        title: slide,
-        SlideTiming: {
-            startDate: {
-                title: "Начало",
-                value: undefined,
-                valueType: 7
-            },
-            dueDate: {
-                title: "Завершение",
-                value: undefined,
-                valueType: 7
-            },
-            duration: {
-                title: "Продолжительность, мин",
-                value: undefined,
-                valueType: 1
-            }
-        },
-        like: {
-            title: 'like',
-            value: 0,
-            valueType: 5
-        },
-        dislike: {
-            title: 'dislike',
-            value: 0,
-            valueType: 5
-        },
-        bookmark: {
-            title: 'bookmark',
-            value: 0,
-            valueType: 5
-        },
-        visited: {
-            title: 'visited',
-            value: 0,
-            valueType: 5
-        }
-    }
-}
-
-const getDCSlides = () => {
-    const slides = [];
-    for (let i = 0; i < slidesAmount; i++) {
-        slides.push(getDCNewSlide(`slide_${i}`))
-    }
-    return slides;
-}
-
-const setDCSlideStartDate = (slide, startTime) => {
-    return {
-        ...slide,
-        SlideTiming: {
-            ...slide.SlideTiming,
-            startDate: {
-                ...slide.SlideTiming.dueDate,
-                value: startTime
-            }
-        }
-    }
-}
-
-const setDCSlideEndDate = (slide, endTime) => {
-    const startTime = slide.SlideTiming.startDate.value;
-    const calcDuration = ((endTime - startTime) / (1000 * 60)).toFixed(1);
-    return {
-        ...slide,
-        SlideTiming: {
-            ...slide.SlideTiming,
-            dueDate: {
-                ...slide.SlideTiming.dueDate,
-                value: endTime
-            },
-            duration: {
-                ...slide.SlideTiming.duration,
-                value: calcDuration
-            }
-        }
-    }
-}
-
-const setDCPresTiming = (dc, endTime) => {
-    const startTime = dc.PresentationTiming.startDate.value;
-    const calcDuration = ((endTime - startTime) / (1000 * 60)).toFixed(1);
-    return {
-        ...dc,
-        PresentationTiming: {
-            ...dc.PresentationTiming,
-            dueDate: {
-                ...dc.PresentationTiming.dueDate,
-                value: endTime,
-            },
-            duration: {
-                ...dc.PresentationTiming.duration,
-                value: calcDuration,
-            }
-        }
-    }
-}
-
-const getNewDC = () => {
-    return {
-        story: getDCStory(),
-        title: presName,
-        dataContainer: generateTimeBasedUUID(),
-        PresentationTiming: {
-            startDate: {
-                title: "Начало",
-                value: Date.now(),
-                valueType: 7
-            },
-            dueDate: {
-                title: "Завершение",
-                value: undefined,
-                valueType: 7
-            },
-            duration: {
-                title: "Продолжительность, мин",
-                value: undefined,
-                valueType: 1
-            }
-        },
-        slides: getDCSlides(),
-    }
-}
-
-let dc = JSON.parse(localStorage.getItem('Datacontainer'));
-console.log(dc);
-
-if (dc == undefined) {
-    console.log('new dc');
-    
-    dc = getNewDC();
-    console.log(dc);
-}
-
-function endCount () {
-    const dc = JSON.parse(localStorage.getItem('Datacontainer'));
-    const currentSlide = document.querySelector('title').innerText;
-    const slide = dc.slides.find(item => item.name == currentSlide);
-    if (!slide.SlideTiming.dueDate.value) {
-        updateDC(undefined, {
-            slide: currentSlide,
-            endTime: Date.now()
-        });
-    }
-}
-
-function updateDC(slideStartTime, slideEndTime) {
-    if (slideStartTime) {
-        const slide = dc.slides.find(slide => slide.name === slideStartTime.slide);
-        if (!slide.SlideTiming.startDate.value)
-            setDCSlideStartDate(slide, slideStartTime.startTime);
-    }
-
-    if (slideEndTime) {
-        const slide = dc.slides.find(item => item.name == slideEndTime.slide);
-        setDCSlideEndDate(slide, slideEndTime.endTime);
-    }
-
-    const currentTime = Date.now();
-    dc = setDCPresTiming(dc, currentTime);    
-    localStorage.setItem('Datacontainer', JSON.stringify(dc));
-}
-
-const isDatacontainer = localStorage.getItem('Datacontainer') == undefined;
-
-if (!isDatacontainer) {
-    const dc = getNewDC();
-    localStorage.setItem('Datacontainer', JSON.stringify(dc));
-}
 
 // likes + dislikes + bookmarks
 
@@ -778,17 +766,31 @@ function handleBookmarksNav(bookmark) {
     sideMenuCloseBtn.click();
 }
 
+const removeBookmark = (slide) => {
+    return {
+        ...slide,
+        bookmark: {
+            ...slide.bookmark,
+            value: false
+        }
+    };
+}
+
 function setBookmarksRemover() {
     const bookmarksRemoveBtns = document.querySelectorAll('.bookmark__btn--close');
-    const bookmarkBoxes = document.querySelectorAll('.bookmark__box');
     bookmarksRemoveBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const sl = btn.dataset.name;
-            const slBox = Array.from(bookmarkBoxes).filter(box => box.dataset.slide == sl)
-            bookmarks = bookmarks.filter(item => item != sl);
-            setBookmarks();
-            checkBookmarks();
-            slBox[0].remove();
+            const dc = JSON.parse(localStorage.getItem('Datacontainer'));
+            const slideName = btn.dataset.name;
+            const slideIndex = dc.slides.findIndex(slide => slide.name == slideName);
+
+            if (slideIndex !== -1) {
+                const updatedSlide = removeBookmark(dc.slides[slideIndex]);
+                dc.slides[slideIndex] = updatedSlide;
+
+                localStorage.setItem('Datacontainer', JSON.stringify(dc));
+                renderBookmarks();
+            }
         });
     });
 }
@@ -802,12 +804,10 @@ function renderBookmarks() {
     const dc = JSON.parse(localStorage.getItem('Datacontainer'));
     const bookmarks = [];
     dc.slides.forEach(slide => {
-        if (slide.like.value) {
+        if (slide.bookmark.value) {
             bookmarks.push(slide.name);
         }
     })
-    console.log(bookmarks);
-    
 
     const bookmarksContent = bookmarks.map(bookmark => (`<div class="bookmark__box" data-slide="${bookmark}">
         <img
@@ -824,3 +824,35 @@ function renderBookmarks() {
     container.innerHTML = bookmarksContent;
     setBookmarksRemover();
 }
+
+// exit presentation
+
+window.close = function () {
+    try {
+        if (parent && parent.close) {
+            return parent.close();
+        }
+    } catch (error) {
+
+    }
+}
+
+const exitBtn = document.querySelector('.side-menu__exit-pres');
+
+exitBtn.addEventListener('click', () => {
+    window.close();
+});
+
+window.addEventListener('click', () => {
+    const frame = document.querySelector('iframe');
+    if (!frame) return;
+    frame.addEventListener('load', () => {
+        try {
+            frame.contentWindow.close = function () {
+                window.close();
+            }
+        } catch (error) {
+
+        }
+    })
+});

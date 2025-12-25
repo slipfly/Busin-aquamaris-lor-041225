@@ -2,62 +2,57 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
 .title,
-.video__play,
-.ray {
+.video__play {
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .title {
     background-image: url(./image/title.png);
-    width: 689px;
-    height: 226px;
-    top: 485px;
-    left: 81px;
+    width: 431px;
+    height: 142px;
+    top: 310px;
+    left: 50px;
 }
 
 .video__play {
-    height: 860px;
-    top: 170px;
+    height: 551px;
+    top: 109px;
 
     &[data-play="video-1"] {
         background-image: url(./image/preview-1.png);
-        width: 491px;
-        right: 150px;
+        width: 314px;
+        right: 102px;
 
     }
 
     &[data-play="video-2"] {
         background-image: url(./image/preview-2.png);
-        width: 487px;
-        right: 684px;
+        width: 312px;
+        right: 438px;
         
     }
 }
 
 video {
     position: absolute;
-    height: 860px;
-    top: 170px;
-    border-radius: 30px;
+    height: 551px;
+    top: 109px;
+    border-radius: 19px;
 
     &#video-2 {
-        width: 487px;
-        right: 684px;
+        width: 312px;
+        right: 438px;
     }
 
     &#video-1 {
-        width: 491px;
-        right: 150px;
+        width: 314px;
+        right: 102px;
     }
-}
-
-.ray {
-    background-image: url(./image/ray.png);
-    width: 767px;
-    height: 496px;
-    left: 172px;
-    top: 12px;
 }

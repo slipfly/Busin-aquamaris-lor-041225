@@ -2,9 +2,12 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
 .title,
 .subtitle, 
-.star,
 .shell,
 .bottle-1, 
 .bottle-2,
@@ -17,72 +20,56 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1142px;
-    height: 284px;
-    top: 81px;
-    left: 86px;
+    width: 601px;
+    height: 181px;
+    top: 52px;
+    left: 50px;
 }
 
 .subtitle {
     background-image: url(./image/subtitle.png);
-    width: 803px;
-    height: 304px;
-    top: 418px;
-    left: 83px;
+    width: 453px;
+    height: 172px;
+    top: 270px;
+    left: 52px;
 } 
 
 .bottle-1 {
     background-image: url(./image/bottle-1.png);
-    width: 325px;
-    height: 864px;
-    top: 185px;
-    right: 555px;
+    width: 209px;
+    height: 555px;
+    top: 119px;
+    right: 354px;
 } 
 
 .bottle-2 {
     background-image: url(./image/bottle-2.png);
-    width: 290px;
-    height: 863px;
-    top: 185px;
-    right: 356px;
+    width: 186px;
+    height: 555px;
+    top: 119px;
+    right: 226px;
 } 
 
 .bottle-3 {
     background-image: url(./image/bottle-3.png);
-    width: 284px;
-    height: 924px;
-    top: 124px;
-    right: 132px;
+    width: 183px;
+    height: 593px;
+    top: 80px;
+    right: 82px;
 } 
 
 .octo {
     background-image: url(./image/octo.png);
-    width: 339px;
-    height: 560px;
-    top: 499px;
-    right: 788px;
-}
-
-.star-1 {
-    background-image: url(./image/star-1.png);
-    width: 318px;
-    height: 305px;
-    bottom: 143px;
-    left: 295px;
-}
-
-.star-2 {
-    background-image: url(./image/star-2.png);
-    width: 899px;
-    height: 706px;
-    left: -256px;
-    bottom: -67px;
+    width: 218px;
+    height: 360px;
+    top: 320px;
+    right: 504px;
 }
 
 .shell {
     background-image: url(./image/shell.png);
-    width: 203px;
-    height: 164px;
+    width: 128px;
+    height: 114px;
     right: 0px;
-    bottom: 114px;
+    bottom: 61px;
 }

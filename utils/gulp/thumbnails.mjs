@@ -1,12 +1,12 @@
 import gulp from 'gulp'
-const {series} = gulp
+const { series } = gulp
 import puppeteer from 'puppeteer'
 import jimp from 'jimp'
 import browserSync from 'browser-sync'
 import events from 'node:events'
 import fs from 'node:fs'
 
-import {path as _path} from './config.mjs'
+import { path as _path } from './config.mjs'
 
 const bs = browserSync.create()
 
@@ -38,8 +38,8 @@ export async function createThumbnails(done) {
         ignoreHTTPSErrors: true,
         headless: 'new',
         defaultViewport: {
-            width: 2000,
-            height: 1200,
+            width: 1280,
+            height: 768,
         },
         args: ['--no-sandbox', '--disable-gpu'],
     })
@@ -60,7 +60,7 @@ export async function createThumbnails(done) {
                     .read('dist/' + folder + '/thumb.png')
                     .then(img => {
                         return img
-                            .resize(380, 228)
+                            .resize(243, 146)
                             .quality(60)
                             .write('dist/' + folder + '/thumb.png')
                     })
@@ -89,7 +89,7 @@ export async function createSharedThumbnails(done) {
     const browser = await puppeteer.launch({
         ignoreHTTPSErrors: true,
         headless: 'new',
-        defaultViewport: { width: 2000, height: 1200 },
+        defaultViewport: { width: 1280, height: 768 },
         args: ['--no-sandbox', '--disable-gpu'],
     });
 
@@ -112,7 +112,7 @@ export async function createSharedThumbnails(done) {
                     await page.close();
 
                     const img = await jimp.read(outPath);
-                    await img.resize(380, 228).quality(60).writeAsync(outPath);
+                    await img.resize(243, 146).quality(60).writeAsync(outPath);
 
                 } catch (err) {
                     console.error(`Thumb error for ${folder}:`, err);

@@ -2,6 +2,14 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
+.header__links {
+    display: none;
+}
+
 .title,
 .image,
 .plate,
@@ -14,73 +22,69 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1207px;
-    height: 235px;
-    top: 82px;
-    left: 83px;
-}
-
-.image {
-
+    width: 754px;
+    height: 147px;
+    top: 50px;
+    left: 51px;
 }
 
 .image-1 {
     background-image: url(./image/image-1.png);
-    width: 729px;
-    height: 390px;
-    bottom: 140px;
-    left: 86px;
+    width: 467px;
+    height: 250px;
+    bottom: 90px;
+    left: 50px;
 }
 
 .image-2 {
     background-image: url(./image/image-2.png);
-    width: 734px;
-    height: 392px;
-    top: 294px;
-    right: 60px;
+    width: 470px;
+    height: 251px;
+    top: 188px;
+    right: 50px;
 } 
 
 .plate {
-    width: 433px;
-    height: 274px;
+    width: 277px;
+    height: 175px;
 }
 
 .plate-1 {
     background-image: url(./image/plate-1.png);
-    top: 353px;
-    left: 86px;
+    top: 226px;
+    left: 50px;
 }
 
 .plate-2 {
     background-image: url(./image/plate-2.png);
-    top: 353px;
-    left: 649px;
+    top: 226px;
+    left: 405px;
 }
 
 .plate-3 {
     background-image: url(./image/plate-3.png);
-    bottom: 198px;
-    right: 620px;
+    bottom: 127px;
+    right: 407px;
 }
 
 .plate-4 {
     background-image: url(./image/plate-4.png);
-    right: 59px;
-    bottom: 198px;
+    right: 50px;
+    bottom: 127px;
 }
 
 .star {
     background-image: url(./image/star.png);
-    width: 101px;
-    height: 103px;
-    top: 312px;
-    right: 881px;
+    width: 65px;
+    height: 66px;
+    top: 200px;
+    right: 564px;
 }
 
 .fish {
     background-image: url(./image/fish.png);
-    width: 238px;
-    height: 238px;
-    right: -59px;
-    bottom: 97px;
+    width: 153px;
+    height: 153px;
+    right: -38px;
+    bottom: 62px;
 }

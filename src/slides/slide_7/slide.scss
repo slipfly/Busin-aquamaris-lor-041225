@@ -2,6 +2,9 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
 .title, 
 .subtitle, 
 .star,
@@ -14,66 +17,66 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1142px;
-    height: 189px;
-    top: 149px;
-    left: 80px;
+    width: 674px;
+    height: 120px;
+    top: 95px;
+    left: 50px;
 }
 
 .subtitle {
     background-image: url(./image/subtitle.png);
-    width: 906px;
-    height: 68px;
-    top: 387px;
+    width: 582px;
+    height: 43px;
+    top: 248px;
     left: 0px;
 }
 
 .star-1 {
     background-image: url(./image/star-1.png);
-    width: 447px;
-    height: 526px;
-    bottom: 214px;
-    left: 82px;
+    width: 267px;
+    height: 314px;
+    bottom: 156px;
+    left: 47px;
 }
 
 .star-2 {
     background-image: url(./image/star-2.png);
-    width: 546px;
-    height: 546px;
-    bottom: 147px;
-    left: 626px;
+    width: 242px;
+    height: 257px;
+    bottom: 180px;
+    left: 390px;
 }
 
 .star-3 {
     background-image: url(./image/star-3.png);
-    width: 399px;
-    height: 437px;
-    top: 182px;
-    right: 66px;
+    width: 321px;
+    height: 328px;
+    top: 127px;
+    right: 11px;
 }
 
 .star-4 {
     background-image: url(./image/star-4.png);
-    width: 376px;
-    height: 397px;
-    bottom: 151px;
-    right: 166px;
+    width: 240px;
+    height: 253px;
+    bottom: 97px;
+    right: 117px;
 }
 
 .bottle {
     background-image: url(./image/bottle.png);
-    width: 516px;
-    height: 1142px;
+    width: 331px;
+    height: 731px;
     top: 0px;
-    right: 412px;
+    right: 271px;
     z-index: 1;
 }
 
 .age {
     background-image: url(./image/age.png);
-    width: 149px;
-    height: 149px;
-    top: 224px;
-    right: 721px;
+    width: 95px;
+    height: 95px;
+    top: 143px;
+    right: 471px;
     z-index: 1;
 }

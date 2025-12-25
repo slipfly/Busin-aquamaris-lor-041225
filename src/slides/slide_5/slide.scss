@@ -2,6 +2,10 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
 .title,
 .text-1,
 .image,
@@ -14,42 +18,42 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1216px;
-    height: 156px;
-    top: 80px;
-    left: 87px;
+    width: 760px;
+    height: 98px;
+    top: 50px;
+    left: 50px;
 }
 
 
 .text-1 {
     background-image: url(./image/text-1.png);
-    width: 581px;
-    height: 233px;
-    top: 416px;
-    left: 83px;
+    width: 330px;
+    height: 135px;
+    top: 266px;
+    left: 50px;
 
 }
 
 .image {
     background-image: url(./image/image.png);
-    width: 550px;
-    height: 687px;
-    right: 611px;
-    bottom: 199px;
+    width: 352px;
+    height: 440px;
+    right: 391px;
+    bottom: 127px;
 } 
 
 .text-2 {
     background-image: url(./image/text-2.png);
-    width: 534px;
-    height: 563px;
-    right: 60px;
-    bottom: 327px;
+    width: 342px;
+    height: 359px;
+    right: 38px;
+    bottom: 210px;
 }
 
 .star {
     background-image: url(./image/star.png);
-    width: 101px;
-    height: 103px;
-    right: 559px;
-    bottom: 219px;
+    width: 65px;
+    height: 66px;
+    right: 358px;
+    bottom: 140px;
 }

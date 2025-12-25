@@ -2,6 +2,14 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
+.header__links {
+    display: none;
+}
+
 .title, 
 .subtitle,
 .advantages-box, 
@@ -23,108 +31,108 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1207px;
-    height: 210px;
-    top: 149px;
-    left: 81px;
+    width: 775px;
+    height: 134px;
+    top: 95px;
+    left: 50px;
 }
 
 .subtitle {
     background-image: url(./image/subtitle.png);
-    width: 906px;
-    height: 68px;
-    top: 387px;
+    width: 582px;
+    height: 43px;
+    top: 248px;
     left: 0px;
 }
 
 .advantages-box {
-    width: 528px;
-    height: 426px;
+    width: 326px;
+    height: 269px;
     bottom: 0px;
     left: 0px;
 }
 
 .circle-dark {
     background-image: url(./image/circle-dark.png);
-    width: 528px;
-    height: 426px;
+    width: 326px;
+    height: 269px;
     bottom: 0px;
     left: 0px;
 }
 
 .circle-light {
     background-image: url(./image/circle-light.png);
-    width: 464px;
-    height: 394px;
+    width: 296px;
+    height: 249px;
     bottom: 0px;
-    left: 32px;
+    left: 9px;
 }
 
 .advantages {
     background-image: url(./image/advantages.png);
-    width: 357px;
-    height: 36px;
-    bottom: 203px;
-    left: 86px;
+    width: 213px;
+    height: 22px;
+    bottom: 127px;
+    left: 53px;
 }
 
 .seahorse {
     background-image: url(./image/seahorse.png);
-    width: 201px;
-    height: 201px;
-    bottom: 282px;
-    left: -188px;
+    width: 129px;
+    height: 129px;
+    bottom: 180px;
+    left: -192px;
 }
 
 .bottle-1 {
     background-image: url(./image/bottle-1.png);
-    width: 687px;
-    height: 1018px;
-    top: 65px;
-    right: 277px;
+    width: 472px;
+    height: 680px;
+    top: 41px;
+    right: 145px;
 }
 
 .bottle-2 {
     background-image: url(./image/bottle-2.png);
-    width: 699px;
-    height: 1022px;
-    top: 82px;
-    right: 19px;
+    width: 446px;
+    height: 655px;
+    top: 52px;
+    right: 14px;
 }
 
 .age {
-    width: 149px;
-    height: 149px;
-    top: 362px;
+    width: 95px;
+    height: 95px;
+    top: 231px;
 }
 
 .age-1 {
     background-image: url(./image/age-1.png);
-    right: 684px;
+    right: 438px;
 }
 
 .age-2 {
     background-image: url(./image/age-2.png);
-    right: 135px;
+    right: 87px;
 }
 
 .octo {
     background-image: url(./image/octo.png);
-    width: 418px;
-    height: 652px;
-    right: 670px;
-    bottom: 77px;
+    width: 268px;
+    height: 418px;
+    right: 429px;
+    bottom: 48px;
 }
 
 .popup__open-btn {
     background-image: url(./image/pop-open-btn.svg);
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
 }
 
 .popup__close-btn {
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
 }
 
 .circle {
@@ -138,16 +146,16 @@
 
 .corall-1 {
     background-image: url(./image/corall-1.png);
-    width: 240px;
-    height: 313px;
-    left: 41px;
-    bottom: 189px;
+    width: 158px;
+    height: 206px;
+    left: 21px;
+    bottom: 123px;
 }
 
 .corall-2 {
     background-image: url(./image/corall-2.png);
-    width: 836px;
-    height: 426px;
+    width: 543px;
+    height: 278px;
     left: 0;
     bottom: 0;
 } 
@@ -157,31 +165,31 @@
 }
 
 [data-popup-id='pop-0'] {
-    left: 57px;
-    bottom: 474px;
+    left: 37px;
+    bottom: 303px;
 }
 
 [data-popup-id='pop-1']  {
-    left: 260px;
-    bottom: 387px;
+    left: 167px;
+    bottom: 250px;
 }
 
 [data-popup-id='pop-2'] {
-    left: 585px;
-    bottom: 364px;
+    left: 383px;
+    bottom: 237px;
 }
 
 [data-popup-id='pop-3'] {
-    left: 756px;
-    bottom: 180px;
+    left: 484px;
+    bottom: 118px;
 }
 
 #pop-0 {
     background-image: url(./image/pop-0.png);
-    width: 616px;
-    height: 141px;
-    left: 57px;
-    bottom: 474px;
+    width: 354px;
+    height: 105px;
+    left: 37px;
+    bottom: 303px;
 
     & > .popup__close-btn {
         left: 0;
@@ -191,10 +199,10 @@
 
 #pop-1 {
     background-image: url(./image/pop-1.png);
-    width: 549px;
-    height: 185px;
-    left: 260px;
-    bottom: 384px;
+    width: 297px;
+    height: 128px;
+    left: 167px;
+    bottom: 250px;
 
     & > .popup__close-btn {
         left: 0;
@@ -204,26 +212,26 @@
 
 #pop-2 {
     background-image: url(./image/pop-2.png);
-    width: 469px;
-    height: 201px;
-    left: 510px;
-    bottom: 364px;
+    width: 261px;
+    height: 127px;
+    left: 349px;
+    bottom: 237px;
 
     & > .popup__close-btn {
-        left: 75px;
+        left: 34px;
         bottom: 0;
     }
 }
 
 #pop-3 {
     background-image: url(./image/pop-3.png);
-    width: 407px;
-    height: 193px;
-    left: 687px;
-    bottom: 180px;
+    width: 247px;
+    height: 116px;
+    left: 450px;
+    bottom: 118px;
 
     & > .popup__close-btn {
-        left: 70px;
+        left: 34px;
         bottom: 0;
     }
 }

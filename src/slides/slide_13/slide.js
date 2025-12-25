@@ -9,18 +9,6 @@ updateDC({
 const tl = gsap.timeline();
 
 function fish() {
-    const tlFish = gsap.timeline();
-    tlFish.fromTo('.ray', 4, {
-        rotate: '10deg',
-        repeat: -1,
-        yoyo: true,
-        ease: "none"
-    }, {
-        rotate: '0deg',
-        repeat: -1,
-        yoyo: true,
-        ease: "none",
-    })
     endCount()
 }
 
@@ -37,14 +25,7 @@ tl.fromTo('.title', {
 }, {
     y: 0,
     opacity: 1,
-}).fromTo('.ray', 1.5, {
-    x: 1200,
-    y: 500
-}, {
-    x: 0,
-    y: 0,
-    rotate: '10deg'
-}, 0).call(fish);
+}).call(fish);
 
 const videoPlayBtns = document.querySelectorAll('.video__play');
 const videos = document.querySelectorAll('video');

@@ -2,6 +2,14 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
+.header__links {
+    display: none;
+}
+
 .title,
 .star,
 .spot,
@@ -17,93 +25,89 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1326px;
-    height: 235px;
-    top: 81px;
-    left: 84px;
-}
-
-.star {
-
+    width: 829px;
+    height: 147px;
+    top: 50px;
+    left: 51px;
 }
 
 .star-1 {
     background-image: url(./image/star-1.png);
-    width: 424px;
-    height: 424px;
-    left: 62px;
-    bottom: 455px;
+    width: 272px;
+    height: 272px;
+    left: 40px;
+    bottom: 291px;
 }
 
 .star-2 {
     background-image: url(./image/star-2.png);
-    width: 557px;
-    height: 557px;
-    left: 178px;
-    bottom: 58px;
+    width: 357px;
+    height: 357px;
+    left: 114px;
+    bottom: 37px;
 }
 
 .star-3 {
     background-image: url(./image/star-3.png);
-    width: 606px;
-    height: 606px;
-    left: 397px;
-    bottom: 349px;
+    width: 388px;
+    height: 388px;
+    left: 254px;
+    bottom: 223px;
 }
 
 .star-4 {
     background-image: url(./image/star-4.png);
-    width: 552px;
-    height: 552px;
-    left: 636px;
-    bottom: 43px;
+    width: 353px;
+    height: 353px;
+    left: 407px;
+    bottom: 27px;
 }
 
 .spot {
     background-image: url(./image/spot.png);
-    width: 878px;
-    height: 1175px;
-    bottom: 24px;
+    width: 648px;
+    height: 768px;
+    bottom: 0;
     right: 0;
     transform-origin: bottom right;
 }
 
 .side-text {
     background-image: url(./image/side-text.png);
-    width: 321px;
-    height: 258px;
-    top: 404px;
-    right: 59px;
+    width: 201px;
+    height: 164px;
+    top: 271px;
+    right: 42px;
 }
 
 .product {
     background-image: url(./image/product.png);
-    width: 983px;
-    height: 957px;
-    right: 12px;
+    width: 630px;
+    height: 613px;
+    right: 7px;
     bottom: 0px;
 }
 
 .age {
     background-image: url(./image/age.png);
-    width: 149px;
-    height: 149px;
-    right: 822px;
-    top: 441px;
+    width: 95px;
+    height: 95px;
+    right: 526px;
+    top: 282px;
 }
 
 .shell {
     background-image: url(./image/shell.png);
-    width: 180px;
-    height: 141px;
-    right: 738px;
-    bottom: 160px;
+    width: 115px;
+    height: 91px;
+    right: 472px;
+    bottom: 100px;
 }
 
 .remark {
     background-image: url(./image/remark.png);
-    width: 558px;
-    height: 131px;
-    right: 203px;
-    bottom: 140px;
+    width: 352px;
+    height: 60px;
+    right: 141px;
+    bottom: 89px;
 }

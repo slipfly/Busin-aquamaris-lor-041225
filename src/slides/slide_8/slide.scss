@@ -2,6 +2,10 @@
     background-image: url('./image/bg-1.png');
 }
 
+.header__links {
+    display: none;
+}
+
 .title, 
 .subtitle, 
 .product {
@@ -12,24 +16,24 @@
 
 .title {
     background-image: url(./image/title.png);
-    width: 1055px;
-    height: 122px;
-    top: 80px;
-    left: 84px;
+    width: 672px;
+    height: 78px;
+    top: 50px;
+    left: 50px;
 }
 
 .subtitle {
     background-image: url(./image/subtitle.png);
-    width: 1010px;
-    height: 128px;
-    top: 236px;
+    width: 636px;
+    height: 82px;
+    top: 151px;
     left: 0px;
 } 
 
 .product {
     background-image: url(./image/product.png);
-    width: 1451px;
-    height: 1200px;
+    width: 871px;
+    height: 768px;
     top: 0px;
-    left: 471px;
+    left: 323px;
 }
